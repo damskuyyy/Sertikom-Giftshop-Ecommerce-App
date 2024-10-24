@@ -9,5 +9,7 @@
 
 ## Instalation Gift Ecommerce App
 - composer install
-- 
+- git clone https://github.com/damskuyyy/Sertikom-Giftshop-Ecommerce-App.git
+- php artisan serve
+ 
 
