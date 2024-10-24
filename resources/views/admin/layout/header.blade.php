@@ -7,7 +7,8 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{('admin')}}/css.css" />
+    <link rel="stylesheet" href="{{ asset('admin/css.css') }}" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
     <title>Dashboard Admin</title>
   </head>
 
@@ -29,7 +30,7 @@
           <input type="checkbox" id="theme-toggle" hidden />
           <label for="theme-toggle" class="theme-toggle"></label>
           <div class="profile">
-            <img src="{{('admin')}}/images/profile-1.jpg" />
+            <img src="{{asset('admin')}}/images/profile-1.jpg" />
             <div class="profile-content">
               <ul>
               <li><a href="{{url('admin/profile')}}">

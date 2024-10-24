@@ -1,12 +1,12 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <a href="#" class="logo">
-        <img src="{{('admin')}}/images/logo.png" class="logo-img" />
+        <img src="{{asset('admin')}}/images/logo.png" class="logo-img" />
         <div class="nama-logo"><span>Gift</span>Admin</div>
       </a>
       <ul class="side-menu">
         <li class="active">
-          <a href="#"><i class="bx bxs-dashboard"></i>Dashboard</a>
+          <a href="{{url('dashboard')}}"><i class="bx bxs-dashboard"></i>Dashboard</a>
         </li>
         <li>
           <a href="#"><i class="bx bx-store-alt"></i>Toko</a>
