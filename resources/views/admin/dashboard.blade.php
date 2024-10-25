@@ -14,7 +14,7 @@
         <article class="admin-welcome">
           <h1>Selamat datang di Dashboard Admin Gift Ecommerce App</h1>
           <p>Halo  Admin,</p>
-          <p>Terima kasih telah menjadi bagian dari Admin Toko Kita.</p>
+          <p>Terima kasih telah menjadi bagian dari Admin Ecommerce App.</p>
         </article>
 
         <!-- Insights -->

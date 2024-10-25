@@ -37,16 +37,8 @@
                   {{ Auth::user()->name }} </a>
               </li>
                 <li>
-                  <a href="#" class="profil-content-menu">Profile Setting</a>
+                  <a href="{{url('admin/profile')}}" class="profil-content-menu">Profile Setting</a>
                 </li>
-                <li>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" class="logout-btn">
-                        <i class="bx bx-log-out-circle"></i> Logout
-                    </button>
-                </form>
-            </li>
               </ul>
             </div>
           </div>

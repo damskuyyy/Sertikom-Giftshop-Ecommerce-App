@@ -9,26 +9,29 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
-Auth::routes();
+Route::get('/', function(){
+    return view('front.beranda');
+        
+ });
 
-Route::post('/logout', function () {
-    Auth::logout();
-    return redirect('/login'); // Redirect setelah logout
-})->name('logout');
+
+//Route::group(['middleware' => ['auth', 'checkActive', 'role:admin|manager|staff']], function(){
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
-Route::get('/', function(){
-    return view('front.beranda');
-
-});
 
 Route::get('/dashboard', function(){
     return view('admin.dashboard');
-
+    
 });
 
-Route::get('/admin/user', [UserController::class, 'index'])->name('admin.user');
+Auth::routes();
+
+// Route::get('/user', [UserController::class, 'index']);
+Route::prefix('admin')->group(function () {
+    Route::resource('user', UserController::class);
+});
+    
 
 
 

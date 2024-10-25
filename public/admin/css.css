@@ -684,6 +684,22 @@ footer {
   background-color: #c82333;
 }
 
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
 .btn-sm {
   padding: 5px 10px;
   font-size: 12px;

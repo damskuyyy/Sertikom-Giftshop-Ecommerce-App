@@ -62,18 +62,41 @@
             </li>
           </ul>
           <div class="user_option">
-            <a href="{{ route('login') }}">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
-            </a>
-            <a href="{{ route('register') }}">
-            <i class="fa fa-user-plus" aria-hidden="true"></i>
-              <span>
-                Register
-              </span>
-            </a>
+              <!-- Logic Login Register -->
+              @guest
+              @if (Route::has('login'))
+                <a href="{{ route('login') }}">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>Login</span>
+                </a>
+              @endif
+
+              @if (Route::has('register'))
+                <a href="{{ route('register') }}">
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  <span>Register</span>
+                </a>
+              @endif
+            @else
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>{{ Auth::user()->name }}</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <span>Logout</span>
+                  </a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                  </form>
+                </div>
+              </div>
+            @endguest
+            <!-- Logic Login Register -->
+             
             <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
