@@ -26,6 +26,7 @@ class UserController extends Controller
     }
 
     // Store a newly created resource in storage
+    //parameter
     public function store(Request $request)
     {
         // Validasi input form
@@ -34,6 +35,7 @@ class UserController extends Controller
         'email' => 'required|email',
         'password' => 'required|min:6', 
     ]);
+    
 
     // Simpan user dengan hashing password
     User::create([

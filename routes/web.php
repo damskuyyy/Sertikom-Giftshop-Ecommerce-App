@@ -28,6 +28,7 @@ Route::get('/dashboard', function(){
 Auth::routes();
 
 // Route::get('/user', [UserController::class, 'index']);
+
 Route::prefix('admin')->group(function () {
     Route::resource('user', UserController::class);
 });

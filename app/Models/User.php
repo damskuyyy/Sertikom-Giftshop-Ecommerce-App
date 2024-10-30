@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+//user classnya 
+//extends Authenticatable turunan dari Authenticatable yang maksudnya class user bisa memanggil properti yg ada di Authenticatable
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
@@ -17,6 +19,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    //protected maksudnya datanya tdk bisa dirubah namun bisa dipanggil diclass turunannanya/subclass
+    //public maksudnya datanya bisa dirubah dan datanya bisa dipanggil di class turunannya
+    //privat maksudnya datanya tdk bisa dirubah dan datanya tidak bisa dipanggil di class turunannya/subclass
+    //fillable adalah array dengan didalamnya tipedata string dan int 
     protected $fillable = [
         'name',
         'email',
